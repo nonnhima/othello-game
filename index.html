@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/showPopup.js"></script>
+    <script type="text/javascript" src="js/block.js"></script>
+    <title>オセロゲーム</title>
+</head>
+
+<body>
+    <p class="scores">白：<span class="cnt_white">2</span>　　黒：<span class="cnt_black">2</span></p>
+    <p class="player_color">あなたの色：<span>白</span></p>
+    <div id="block" data-index="11" class="empty"></div>
+    <div id="block" data-index="12" class="empty"></div>
+    <div id="block" data-index="13" class="empty"></div>
+    <div id="block" data-index="14" class="empty"></div>
+    <div id="block" data-index="15" class="empty"></div>
+    <div id="block" data-index="16" class="empty"></div>
+
+    <div id="block" data-index="21" class="empty"></div>
+    <div id="block" data-index="22" class="empty"></div>
+    <div id="block" data-index="23" class="empty"></div>
+    <div id="block" data-index="24" class="empty"></div>
+    <div id="block" data-index="25" class="empty"></div>
+    <div id="block" data-index="26" class="empty"></div>
+
+    <div id="block" data-index="31" class="empty"></div>
+    <div id="block" data-index="32" class="empty"></div>
+    <div id="block" data-index="33" class="black"></div>
+    <div id="block" data-index="34" class="white"></div>
+    <div id="block" data-index="35" class="empty"></div>
+    <div id="block" data-index="36" class="empty"></div>
+
+    <div id="block" data-index="41" class="empty"></div>
+    <div id="block" data-index="42" class="empty"></div>
+    <div id="block" data-index="43" class="white"></div>
+    <div id="block" data-index="44" class="black"></div>
+    <div id="block" data-index="45" class="empty"></div>
+    <div id="block" data-index="46" class="empty"></div>
+
+    <div id="block" data-index="51" class="empty"></div>
+    <div id="block" data-index="52" class="empty"></div>
+    <div id="block" data-index="53" class="empty"></div>
+    <div id="block" data-index="54" class="empty"></div>
+    <div id="block" data-index="55" class="empty"></div>
+    <div id="block" data-index="56" class="empty"></div>
+
+    <div id="block" data-index="61" class="empty"></div>
+    <div id="block" data-index="62" class="empty"></div>
+    <div id="block" data-index="63" class="empty"></div>
+    <div id="block" data-index="64" class="empty"></div>
+    <div id="block" data-index="65" class="empty"></div>
+    <div id="block" data-index="66" class="empty"></div>
+
+    <div class="popup" id="new_game">
+        <div class="popup-inner">
+            <h1>どちらかを選んでください。<br>Choose one.</h1><br>
+            <div class="column">
+                <p>先攻</p>
+                <img src="./img/white.png" data-player-color="white" class="attack">
+            </div>
+            <div class="column">
+                <p>後攻</p>
+                <img src="./img/black.png" data-player-color="black" class="attack">
+            </div>
+        </div>
+        <div class="black-background" id="js-black-bg"></div>
+    </div>
+
+    <div class="popup" id="won_popup">
+        <div class="popup-inner">
+            <div class="close-btn js-close-btn"><i class="fas fa-times"></i></div>
+            <div style="text-align: center; margin-bottom: 17px;">白：<span class="cnt_white">0</span>　　黒：<span class="cnt_black">0</span></div>
+            <div class="winner_img" style="text-align: center;">
+                <img src="" style="width:100px !important">
+            </div>
+            <br>
+
+            <h1>おめでとうございます！</h1>
+            <p><span class="winner_color"></span>が勝ちました。<br>
+                もう一度遊ぶ場合はブラウザをリロードしてください。
+            </p>
+            <h1>Congratulations!</h1>
+            <p><span class="winner_color"></span> won.<br>
+                If you reload the browser, you can play the game again.
+            </p>
+        </div>
+        <div class="black-background js-black-bg"></div>
+    </div>
+
+    <div class="popup" id="draw_popup">
+        <div class="popup-inner">
+            <div class="close-btn js-close-btn"><i class="fas fa-times"></i></div>
+                        <div style="text-align: center; margin-bottom: 17px;">白：<span class="cnt_white">0</span>　　黒：<span class="cnt_black">0</span></div>
+                        <br>
+            <h1>引き分け！</h1>
+            <p>もう一度遊ぶ場合はブラウザをリロードしてください。</p>
+            <br>
+            <h1>Draw!</h1>
+            <p>If you reload the browser, you can play the game again.</p>
+        </div>
+        <div class="black-background js-black-bg"></div>
+    </div>
+
+</body>
+
+</html>
